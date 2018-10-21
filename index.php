@@ -1,14 +1,32 @@
 <?php
-//connect script
-
-DEFINE ('DB_USER', 'bb4df0955f60cd');
-DEFINE ('DB_PASSWORD', '3b26c66b');
-DEFINE ('DB_HOST', 'us-cdbr-iron-east-01.cleardb.net');
-DEFINE ('DB_NAME', 'heroku_a970e1b97180e5d');
-
-$dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
-OR die('Could not connect to MySQL: ' .
-mysqli_connect_error());
-
-echo "DIE";
+session_start();
+$logins = array('admin' => 'abc');
+$username = isset($_POST['username']) ? $_POST['username'] : '';
+$password = isset($_POST['password']) ? $_POST['password'] : '';
+if (isset($logins[$username]) && $logins[$username] == $password) {
+  header("location: homepage/homeAdmin.php");
+  exit;
+}
+else {
+  $msg="<span style='color:red;'>Invalid Login Details</span>";
+}
 ?>
+
+<html>
+  <body>
+    <div id="container">
+      <h1>Group 5</h1>
+      <form action="" method="post" autocomplete="off">
+        <div id = "credentials">
+          <div class="labels"></div><input type="text" name="username" placeholder="Username"><br>
+          <div class="labels"></div><input type="password" name="password" placeholder="Password">
+        </div>
+        <input type="submit" name="submit" value="Log In">
+        <?php if(isset($msg) && isset($_POST['submit'])) {?>
+        <div class="error"><?php echo $msg;?></div>
+         <?php } ?>
+      </form>
+    </div>
+
+  </body>
+</html>

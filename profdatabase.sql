@@ -1,6 +1,3 @@
-CREATE DATABASE profdb;
-USE profdb;
-
 CREATE TABLE department (
 	departmentID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	departmentName VARCHAR(255)
@@ -47,7 +44,7 @@ CREATE TABLE rating (
 );
 
 CREATE TABLE review (
-	reviewText VARCHAR(255),
+	reviewText VARCHAR(10000),
 	teacherID INT NOT NULL,
 	classID INT NOT NULL,
 	departmentID INT NOT NULL,
