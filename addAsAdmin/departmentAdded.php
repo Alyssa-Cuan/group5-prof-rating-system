@@ -7,11 +7,11 @@ if(isset($_POST['submit'])){
     $data_missing = array();
 	   $out = "";
 	if(empty($_POST["departmentName"])){
-        // Adds name to array
+        // Adds deptname to array
         $data_missing[] = "Department Name ";
 
     } else {
-        // Trim white space from the name and store the name
+        // Trim white space from the deptname and store the deptname
         $s_departmentName = trim($_POST["departmentName"]);
     }
 

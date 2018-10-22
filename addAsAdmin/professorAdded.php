@@ -7,29 +7,38 @@
 			$data_missing = array();
 			$out = "";
 			if(empty($_POST["firstName"])){
-				// Adds name to array
+				// Adds fn to array
 				$data_missing[] = "First Name ";
 
 			} else {
-				// Trim white space from the name and store the name
+				// Trim white space from the fn and store the fn
 				$s_firstName = trim($_POST["firstName"]);
 			}
 			
+			if(empty($_POST["middleName"])){
+				// Adds mn to array
+				$data_missing[] = "Middle Name ";
+
+			} else {
+				// Trim white space from the mn and store the mn
+				$s_middleName = trim($_POST["middleName"]);
+			}
+			
 			if(empty($_POST["lastName"])){
-				// Adds name to array
+				// Adds ln to array
 				$data_missing[] = "Last Name ";
 
 			} else {
-				// Trim white space from the name and store the name
+				// Trim white space from the ln and store the ln
 				$s_lastName = trim($_POST["lastName"]);
 			}
 			
 			if(empty($_POST["department"]) || $_POST["department"] == "0"){
-				// Adds name to array
+				// Adds dept to array
 				$data_missing[] = "Department ";
 
 			} else {
-				// Trim white space from the name and store the name
+				// Trim white space from the dept and store the dept
 				$s_department = trim($_POST["department"]);
 			}
 		
@@ -42,12 +51,12 @@
 
         require '../connect/connect.php';
 
-		//inserting the department
-        $query = "INSERT INTO professor (professorID, firstName, lastName, departmentID) VALUES (NULL,?,?,?)";
+		//inserting the professor
+        $query = "INSERT INTO professor (professorID, firstName, middleName, lastName, departmentID) VALUES (NULL,?,?,?,?)";
 
 		$stmt = mysqli_prepare($dbc, $query);
 
-		$stmt->bind_param("sss", $s_firstName, $s_lastName, $s_department);
+		$stmt->bind_param("ssss", $s_firstName, $s_middleName, $s_lastName, $s_department);
 
 		$stmt->execute() or die(mysqli_error($dbc));
 
@@ -75,7 +84,6 @@
 }
 
 ?>
-
     </div>
   </body>
 </html>

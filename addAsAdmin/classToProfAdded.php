@@ -8,19 +8,19 @@
 			$out = "";
 
 			if(empty($_POST["professor"]) || $_POST["professor"] == "0"){
-				// Adds name to array
+				// Adds prof to array
 				$data_missing[] = "Professor ";
 
 			} else {
-				// Trim white space from the name and store the name
+				// Trim white space from the prof and store the prof
 				$s_professor = trim($_POST["professor"]);
 			}
 			if(empty($_POST["class"]) || $_POST["class"] == "0"){
-				// Adds name to array
+				// Adds class to array
 				$data_missing[] = "Class ";
 
 			} else {
-				// Trim white space from the name and store the name
+				// Trim white space from the class and store the class
 				$s_class = trim($_POST["class"]);
 			}
 		
@@ -33,14 +33,13 @@
 
         require '../connect/connect.php';
 
-		//inserting the department
+		//inserting the class into prof
         $query = "INSERT INTO profclass (professorID, classID) VALUES (?,?)";
 
 		$stmt = mysqli_prepare($dbc, $query);
 
 		$stmt->bind_param("ii", $s_professor, $s_class);
 
-		
 		$stmt->execute() or die(mysqli_error($dbc));
 
 

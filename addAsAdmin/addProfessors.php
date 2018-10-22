@@ -12,6 +12,10 @@
 					<input type="text" name="firstName" value="">
 				</div>
 				<div class="group">
+					<label for ="middleName">Middle Name</label><br>
+					<input type="text" name="middleName" value="">
+				</div>
+				<div class="group">
 					<label for ="lastName">Last Name</label><br>
 					<input type="text" name="lastName" value="">
 				</div>
