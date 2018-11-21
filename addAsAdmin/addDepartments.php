@@ -1,8 +1,14 @@
+<?php
+session_start();
+if(!isset($_SESSION['login_user'])){
+    header("Location: ../index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <body>
     <div id="header"> Group 5</div>
-    <a href="../homepage/homeAdmin.php"><div id="back">Back</div></a>
+    <a href="../homepage/home.php"><div id="back">Back</div></a>
     <div id="container">
       <form action="departmentAdded.php" method="post">
         <h1>Department Information</h1>

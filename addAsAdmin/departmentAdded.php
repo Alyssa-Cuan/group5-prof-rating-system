@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
 		echo "<br>
       Department has been successfully added!<br>
       <a href='addDepartments.php'><button type='button' name='button'>Add Another Department</button></a>
-      <a href='../homepage/homeAdmin.php'><button type='button' name='button'>Back to Menu</button></a>";
+      <a href='../homepage/home.php'><button type='button' name='button'>Back to Menu</button></a>";
 
 
     } else {

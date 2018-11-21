@@ -1,9 +1,15 @@
+<?php
+session_start();
+if(!isset($_SESSION['login_user'])){
+    header("Location: ../index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <body>
     <div id="header"> Group 5</div>
-    <a href="../homepage/homeAdmin.php"><div id="back">Back</div></a>
+    <a href="../homepage/home.php"><div id="back">Back</div></a>
     <div id="container">
       <form action="classToProfAdded.php" method="post">
         <h1>Add a Class to Professor</h1>

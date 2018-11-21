@@ -65,7 +65,7 @@
 		echo "<br>
       Class has been successfully added!<br>
       <a href='addProfessors.php'><button type='button' name='button'>Add Another Professor</button></a>
-      <a href='../homepage/homeAdmin.php'><button type='button' name='button'>Back to Menu</button></a>";
+      <a href='../homepage/home.php'><button type='button' name='button'>Back to Menu</button></a>";
 
 
     } else {
