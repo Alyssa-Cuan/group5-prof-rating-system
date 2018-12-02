@@ -7,13 +7,20 @@ require "homeTemplate.php"
         <div class="row mt-5">
             <div class="col-lg mx-auto order-md-1">
                 <div class="col-md-12 border border-secondary rounded">
-                    <h2 class="text-center">Popular Classes</h2>
+                    <h2 class="text-center">Recently Rated Professors</h2>
                     <ul>
-                        <li>PH 104</li>
-                        <li>PH 104</li>
-                        <li>PH 104</li>
-                        <li>PH 104</li>
-                        <li>PH 104</li>
+					
+					<?php
+						@require '../connect/connect.php';
+						//get the top 5 most recently rated profs
+						$query = "SELECT DISTINCT CONCAT(lastName, ', ', firstName, ' ', middleName) AS profName, professor.professorID FROM rating INNER JOIN professor ON professor.professorID = rating.professorID ORDER BY lastmodified ASC LIMIT 5";
+						$recentRatedProfResult = mysqli_query($dbc, $query) or die("ERROR S");
+						
+						while($recentRatedProf = mysqli_fetch_assoc($recentRatedProfResult)){
+							echo "<a href='../search/searchProfessor.php?selectedID=p{$recentRatedProf['professorID']}'><li>{$recentRatedProf['profName']}</li></a>";
+						}
+					?>
+
                     </ul>
                     <div class="text-center">
                         <img src="../assets/student.png" style="width:50%; height:50%">
@@ -24,13 +31,20 @@ require "homeTemplate.php"
 
             <div class="col-lg mx-auto order-md-2 ">
                 <div class="col-md-12 border border-secondary rounded">
-                    <h2 class="text-center">Popular Profs</h2>
+                    <h2 class="text-center">Recently Rated Classes</h2>
                     <ul>
-                        <li>Dacanay</li>
-                        <li>Dacanay</li>
-                        <li>Dacanay</li>
-                        <li>Dacanay</li>
-                        <li>Dacanay</li>
+					
+					<?php
+						//get the top 5 most recently rated classes
+						$query = "SELECT DISTINCT courseCode, class.classID FROM rating INNER JOIN class ON class.classID = rating.classID ORDER BY lastmodified ASC LIMIT 5";
+						$recentRatedClassResult = mysqli_query($dbc, $query) or die("ERROR S");
+						
+						while($recentRatedClass = mysqli_fetch_assoc($recentRatedClassResult)){
+							echo "<a href='../search/searchProfessor.php?selectedID=c{$recentRatedClass['classID']}'><li>{$recentRatedClass['courseCode']}</li></a>";
+						}
+					?>
+
+     
 
                     </ul>
                     <div class="text-center">
@@ -44,7 +58,7 @@ require "homeTemplate.php"
                     class="col-lg mx-auto order-md-3"
             >
                 <div class="col-md-12 border border-secondary rounded">
-                    <h2 class="text-center">Profs you may know</h2>
+                    <h2 class="text-center">Top Professors (to be implemented next sprint)</h2>
                     <!-- <p class="text-center lead lg">Profs you may know</p> -->
                     <ul>
                         <li>Agloro</li>

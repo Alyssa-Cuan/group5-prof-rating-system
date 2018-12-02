@@ -85,8 +85,7 @@ if (isset($_POST['rateProf'])) {
             echo "$missing<br />";
             
         }
-        
-        
+      
     }
     
 } else {
