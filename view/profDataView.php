@@ -377,11 +377,11 @@ $departmentResult = mysqli_query($dbc, $query) or die("ERROR S");
   
           <div class="col-lg mx-auto col-md-4 order-md-2" >
             <h2>Reviews</h2>
-            <ul class="list-group" style="height: 500px; overflow: scroll">
+            <ul class="list-group" style="height: 500px; width: 520px; overflow: scroll">
                 
                  <?php 
 						while ($review = mysqli_fetch_assoc($reviewResult)) {
-							echo '<li class="list-group-item bg-blue">' . $review['reviewText'] .'</li>';
+							echo '<li class="list-group-item bg-blue" style="word-wrap:break-word;">' . $review['reviewText'] .'</li>';
 						}
 
 					?>                                      

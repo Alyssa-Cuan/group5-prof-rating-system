@@ -13,7 +13,7 @@ require "homeTemplate.php"
 					<?php
 						@require '../connect/connect.php';
 						//get the top 5 most recently rated profs
-						$query = "SELECT DISTINCT CONCAT(lastName, ', ', firstName, ' ', middleName) AS profName, professor.professorID FROM rating INNER JOIN professor ON professor.professorID = rating.professorID ORDER BY lastmodified ASC LIMIT 5";
+						$query = "SELECT DISTINCT CONCAT(lastName, ', ', firstName, ' ', middleName) AS profName, professor.professorID FROM rating INNER JOIN professor ON professor.professorID = rating.professorID ORDER BY lastmodified DESC LIMIT 5";
 						$recentRatedProfResult = mysqli_query($dbc, $query) or die("ERROR S");
 						
 						while($recentRatedProf = mysqli_fetch_assoc($recentRatedProfResult)){
@@ -36,7 +36,7 @@ require "homeTemplate.php"
 					
 					<?php
 						//get the top 5 most recently rated classes
-						$query = "SELECT DISTINCT courseCode, class.classID FROM rating INNER JOIN class ON class.classID = rating.classID ORDER BY lastmodified ASC LIMIT 5";
+						$query = "SELECT DISTINCT courseCode, class.classID FROM rating INNER JOIN class ON class.classID = rating.classID ORDER BY lastmodified DESC LIMIT 5";
 						$recentRatedClassResult = mysqli_query($dbc, $query) or die("ERROR S");
 						
 						while($recentRatedClass = mysqli_fetch_assoc($recentRatedClassResult)){

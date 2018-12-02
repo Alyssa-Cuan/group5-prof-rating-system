@@ -33,12 +33,12 @@ function search()
         //printing table headings (ordered asc)
         echo "<div class='container'>";
         echo "<table name='profData' id='professors' align='center' class='table table-striped table-bordered'> ";
-        echo "<thead><tr><th onclick='sortTable(0)'>Professor Name</th><th onclick='sortTable(1)'>Course</th>";
+        echo "<thead><tr><th>Professor Name</th><th>Course</th>";
 
 
 
         for ($x = 0; $x < $arrlength; $x++) {
-            echo "<th onclick='sortTable(" . (2+$x) . ")'>" . $tableHeadings[$x] . "</th>";
+            echo "<th>" . $tableHeadings[$x] . "</th>";
         }
         echo "<th>View</th></tr></thead>";
     }else{
@@ -102,83 +102,6 @@ catch (Exception $e) {
     echo $error;
 }
 ?>
-
-<script>
-function sortTable(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("professors");
-  switching = true;
-  // Set the sorting direction to ascending:
-  dir = "asc"; 
-  type = "string";
-  /* Make a loop that will continue until
-  no switching has been done: */
-  while (switching) {
-    // Start by saying: no switching is done:
-    switching = false;
-    rows = table.rows;
-    /* Loop through all table rows (except the
-    first, which contains table headers): */
-    for (i = 1; i < (rows.length - 1); i++) {
-      // Start by saying there should be no switching:
-      shouldSwitch = false;
-      /* Get the two elements you want to compare,
-      one from current row and one from the next: */
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
-      /* Check if the two rows should switch place,
-      based on the direction, asc or desc: */
-	  
-	  if(!isNaN(Number(x.innerHTML))){
-		  type = "number";
-	  }
-
-      if (dir == "asc") {
-        if (type == "string" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          // If so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-		
-		if(type == "number"){
-			if (parseFloat(x.innerHTML) > parseFloat(y.innerHTML)) {
-				shouldSwitch = true;
-				break;
-			}
-		}
-      } else if (dir == "desc") {
-        if (type == "string" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          // If so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-		
-		if(type == "number"){
-			if (parseFloat(x.innerHTML) < parseFloat(y.innerHTML)) {
-				shouldSwitch = true;
-				break;
-			}
-		}
-      }
-    }
-    if (shouldSwitch) {
-      /* If a switch has been marked, make the switch
-      and mark that a switch has been done: */
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      // Each time a switch is done, increase this count by 1:
-      switchcount ++; 
-    } else {
-      /* If no switching has been done AND the direction is "asc",
-      set the direction to "desc" and run the while loop again. */
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
-    }
-  }
-}
-</script>
 	  
 
 
@@ -191,5 +114,19 @@ function sortTable(n) {
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	
+	<script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="../node_modules/datatables.net/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#professors').DataTable( {
+        "searching":   false
+    } );
+        });
+    </script>
+	
   </body>
 </html>

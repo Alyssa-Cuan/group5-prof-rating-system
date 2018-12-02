@@ -20,6 +20,7 @@ if(!isset($_SESSION['login_user'])){
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous"
     />
+	<link rel="stylesheet" type="text/css" href="../node_modules/datatables.net-dt/css/jquery.dataTables.css">
     <link rel="icon" href="../assets/login.png" />
 
     <title>Search</title>
@@ -60,6 +61,7 @@ if(!isset($_SESSION['login_user'])){
             background-color: DodgerBlue !important;
             color: #ffffff;
         }
+		
 
     </style>
 
