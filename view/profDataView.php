@@ -130,6 +130,12 @@ $departmentResult = mysqli_query($dbc, $query) or die("ERROR S");
                 }
             }
 
+        @media only screen and (max-width: 500px) {
+            .homeCon {
+                margin-top: 750px;
+            }
+        }
+
 
         .autocomplete-active {
             /*when navigating through the items using the arrow keys:*/
