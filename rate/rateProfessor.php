@@ -41,6 +41,33 @@ $departmentResult = mysqli_query($dbc, $query) or die("ERROR S");
     <!-- Custom styles for this template -->
     <link href="../style.css" rel="stylesheet" />
 	 <style type="text/css">
+         output {
+             position: absolute;
+             background-image: linear-gradient(#444444, #999999);
+             width: 40px;
+             height: 30px;
+             text-align: center;
+             color: white;
+             border-radius: 10px;
+             display: inline-block;
+             font: bold 15px/30px Georgia;
+             bottom: 175%;
+             left: 0;
+         }
+         output:after {
+             content: "";
+             position: absolute;
+             width: 0;
+             height: 0;
+             border-top: 10px solid #999999;
+             border-left: 5px solid transparent;
+             border-right: 5px solid transparent;
+             top: 100%;
+             left: 50%;
+             margin-left: -5px;
+             margin-top: -1px;
+         }
+         form { position: relative; margin: 50px; width: 1200px; }
         .autocomplete {
             /*the container must be positioned relative:*/
             position: relative;
@@ -269,7 +296,6 @@ if (isset($_GET['ID']) && isset($_GET['CID'])) {
   
 
     foreach ($_POST as $key => $value) {
-        
         if ($key == "rateProf") {
             break;
         }
@@ -289,6 +315,7 @@ if (isset($_GET['ID']) && isset($_GET['CID'])) {
         
         //inserting the student
         try {
+
             for ($x = 0; $x < $arrlength; $x++) {
                 $SID = $_SESSION['studentID'];
                 
@@ -299,9 +326,9 @@ if (isset($_GET['ID']) && isset($_GET['CID'])) {
                 
                 $stmt->bind_param("sdiii", $s_dataName[$x], $s_dataValue[$x], $ID, $CID, $SID);
                 
-                $stmt->execute() or die("Already rated this professor before!");
+                //$stmt->execute() or die("Already rated this professor before!");
 
-                //$stmt->execute() or die(mysqli_error($dbc));
+                $stmt->execute() or die(mysqli_error($dbc));
 				
             }
         }
@@ -342,10 +369,9 @@ if (isset($_GET['ID']) && isset($_GET['CID'])) {
       <div style="max-width: 400px">
            <?php
     for ($x = 0; $x < $arrlength; $x++) {
-        echo "<div class='group'>
-                    <label for ='rating'>" . $tableHeadings[$x] . "</label><br>" . "<input class='form-control' type='number' step='0.1' name='$tableHeadings[$x]' value='' min='1' max='5'> </div>";
+        echo "<label for ='rating'>" . $tableHeadings[$x] . "</label>" . "<input class='form-control' id='myRange' type='range' name='$tableHeadings[$x]' value='1' min='1' max='5' style='width: 300px;' oninput='updateRangeInput(this)'><input type='text' value='1' style='width: 25px; text-align: center'>";
     }
-	
+
     
 } 
 
@@ -371,6 +397,14 @@ else {
       JavaScript
       ==================================================
     -->
+
+    <script type="text/javascript" language="javascript">
+        function updateRangeInput(elem) {
+            $(elem).next().val($(elem).val());
+        }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
