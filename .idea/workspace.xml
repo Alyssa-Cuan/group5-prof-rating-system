@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5edca65-785d-42f2-8dc0-5c834a63f51b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/homeTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/homeTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/searchProfessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/search/searchProfessor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/profDataView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/profDataView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/modules.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/modules.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profdatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/profdatabase.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rate/rateProfessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/rate/rateProfessor.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +24,16 @@
         <entry file="file://$PROJECT_DIR$/rate/professorRated.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="73" />
+              <caret line="64" column="60" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rateProfessor.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rate/rateProfessor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="301" column="16" selection-start-line="301" selection-start-column="16" selection-end-line="301" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -32,8 +41,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+            <state relative-caret-position="425">
+              <caret line="136" column="26" selection-start-line="136" selection-start-column="26" selection-end-line="136" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
@@ -45,8 +54,8 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homepage/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+            <state relative-caret-position="204">
+              <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
@@ -56,41 +65,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="saveProfessor.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/save/saveProfessor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-51">
+              <caret selection-end-line="5" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="searchProfessor.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search/searchProfessor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="-442">
               <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homeTemplate.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/homepage/homeTemplate.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-589">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profDataView.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/profDataView.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="134" column="29" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -120,18 +108,18 @@
         <option value="$PROJECT_DIR$/addAsAdmin/addProfessors.php" />
         <option value="$PROJECT_DIR$/rate/reviewProfessor.php" />
         <option value="$PROJECT_DIR$/homepage/logout.php" />
-        <option value="$PROJECT_DIR$/rate/rateProfessor.php" />
         <option value="$PROJECT_DIR$/save/saveProfessor.php" />
         <option value="$PROJECT_DIR$/profile/profile.php" />
         <option value="$PROJECT_DIR$/logout.php" />
         <option value="$PROJECT_DIR$/rate/professorRated.php" />
         <option value="$PROJECT_DIR$/rate/professorReviewed.php" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/homepage/home.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/view/profDataView.php" />
         <option value="$PROJECT_DIR$/search/searchProfessor.php" />
         <option value="$PROJECT_DIR$/homepage/homeTemplate.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/rate/rateProfessor.php" />
+        <option value="$PROJECT_DIR$/homepage/home.php" />
       </list>
     </option>
   </component>
@@ -156,7 +144,7 @@
       <path value="$PROJECT_DIR$/vendor/heroku/heroku-buildpack-php" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="571" />
     <option name="width" value="1359" />
     <option name="height" value="1031" />
@@ -222,15 +210,15 @@
       <updated>1541759902111</updated>
       <workItem from="1541759903269" duration="1580000" />
       <workItem from="1541761610576" duration="13464000" />
-      <workItem from="1544675614891" duration="8787000" />
+      <workItem from="1544675614891" duration="11764000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23831000" />
+    <option name="totallyTimeSpent" value="26808000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="381" y="0" width="906" height="687" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5007825" />
@@ -374,13 +362,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rate/rateProfessor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="7" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/register/server.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
@@ -402,47 +383,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/save/saveProfessor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/professorRated.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rate/professorReviewed.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="42" selection-start-line="42" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -463,17 +407,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/homeTemplate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="80" column="13" lean-forward="true" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rate/professorRated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="64" column="60" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="136" column="26" selection-start-line="136" selection-start-column="26" selection-end-line="136" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rate/rateProfessor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="301" column="16" selection-start-line="301" selection-start-column="16" selection-end-line="301" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/search/searchProfessor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="-442">
           <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/homeTemplate.php">
+    <entry file="file://$PROJECT_DIR$/homepage/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+        <state relative-caret-position="204">
+          <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/save/saveProfessor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret selection-end-line="5" selection-end-column="2" />
         </state>
       </provider>
     </entry>

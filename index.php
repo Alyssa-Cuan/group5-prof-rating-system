@@ -40,10 +40,6 @@ if (isset($_POST['submit'])) {
     }
 }
 
-if(isset($_SESSION['registerSuccess'])){
-    echo $_SESSION['registerSuccess'];
-    unset($_SESSION['registerSuccess']);
-}
 ?>
 
 <!DOCTYPE html>
@@ -135,7 +131,10 @@ if(isset($_SESSION['registerSuccess'])){
                         <a href="register/register.php"><p class="text-center p-2">No account? Sign up here</p></a>
 						<?php if (isset($error) && isset($_POST['submit'])) { ?>
             <div class="error"><?php echo $error; ?></div>
-        <?php } ?>
+        <?php } if(isset($_SESSION['registerSuccess'])){
+                            echo $_SESSION['registerSuccess'];
+                            unset($_SESSION['registerSuccess']);
+                        } ?>
                     </form>
 
                 </div>

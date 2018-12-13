@@ -300,6 +300,8 @@ if (isset($_GET['ID']) && isset($_GET['CID'])) {
                 $stmt->bind_param("sdiii", $s_dataName[$x], $s_dataValue[$x], $ID, $CID, $SID);
                 
                 $stmt->execute() or die("Already rated this professor before!");
+
+                //$stmt->execute() or die(mysqli_error($dbc));
 				
             }
         }

@@ -7,6 +7,7 @@ Drop table student;
 Drop table professor;
 Drop table class;
 Drop table department;
+Drop table studentprofclass;
 SET foreign_key_checks = 1;
 
 CREATE TABLE department (
@@ -82,63 +83,124 @@ CREATE TABLE studentclass (
 	FOREIGN KEY (classID) REFERENCES class(classID)
 );
 
+CREATE TABLE studentprofclass (
+	studentID INT NOT NULL,
+	professorID INT NOT NULL,
+	classID INT NOT NULL,
+	PRIMARY KEY (studentID, professorID, classID),
+	FOREIGN KEY (studentID) REFERENCES student(studentID),
+	FOREIGN KEY (professorID) REFERENCES professor(professorID),
+	FOREIGN KEY (classID) REFERENCES class(classID)
+);
+
 
 INSERT INTO department 
-VALUES (NULL, "Filipino");
-INSERT INTO department 
-VALUES (NULL, "Science");
-INSERT INTO department 
-VALUES (NULL, "English");
-INSERT INTO department 
-VALUES (NULL, "Philosophy");
+VALUES 
+(1, "Sociology and Anthropology Department"),
+(11, "Psychology Department"),
+(21, "History Department "),
+(31, "English Department "),
+(41, "Department of Philosophy"),
+(51, "Department of Physics"),
+(61, "Department of Mathematics"),
+(71, "Department of Biology"),
+(81, "Marketing Department")
+;
 
 INSERT INTO class 
-VALUES (NULL, "CS 21A", "Comp Sci", "SOSE", 11);
-INSERT INTO class 
-VALUES (NULL, "EN 12", "EngLit", "SOH", 21);
-INSERT INTO class 
-VALUES (NULL, "CS 129.1", "SaavedraDB", "SOSE", 11);
-INSERT INTO class 
-VALUES (NULL, "PH 101", "Intro to Philo", "SOH", 31);
+VALUES 
+(1, "ANTHRO 262", "THEORIES OF DEVELOPMENT", "SOSS", 1 ),
+(11, "ANTHRO 281", "HISTORY OF ANTHROPOLOGICAL THEORY", "SOSS", 1 ),
+(21, "SA 157", "INTRODUCTION TO CULTURAL HERITAGE", "SOSS", 1 ),
+
+(31, "PSY 101", "GENERAL PSYCHOLOGY", "SOSS", 11 ),
+(41, "PSYCH 272	", "ORGANIZATIONAL PSYCHOLOGY	", "SOSS", 11 ),
+(51, "LEADS 305	", "INNOVATION, CREATIVITY AND CHANGE", "SOSS", 11 ),
+
+(61, "HI 16	", "ASIAN HISTORY", "SOSS", 21 ),
+(71, "HI 165", "RIZAL AND THE EMERGENCE OF THE PHILIPPINE NATION", "SOSS", 21 ),
+
+(81, "ELL 327", "LITERATURE, MEMORY, AND TRAUMA STUDIES	", "SOH", 31 ),
+(91, "EN 12", "COMMUNICATION IN ENGLISH II", "SOH", 31 ),
+
+(101, "PH 101	", "PHILOSOPHY OF THE HUMAN PERSON I", "SOH", 41 ),
+(111, "PH 213", "PHILOSOPHY OF RELIGION", "SOH", 41 ),
+
+(121, "PS 197", "INTRODUCTION TO QUANTUM MECHANICS I", "SOSE", 51 ),
+(131, "AS 201", "FOUNDATIONS OF ATMOSPHERIC SCIENCE", "SOSE", 51 ),
+
+(141, "AMC 124", "MATH FOR COMPUTER SCIENCE I", "SOSE", 61 ),
+(151, "MA 18A", "PRINCIPLES OF MODERN MATHEMATICS I", "SOSE", 61 ),
+
+(161, "BI 3.1", "BIODIVERSITY: LIFE ON EARTH, LABORATORY", "SOSE", 71 ),
+(171, "SED 271", "INTEGRATED SCIENCE 1 - EARTH AND ENVIRONMENTAL SCIENCE", "SOSE", 71 ),
+
+
+(181, "LAW 11", "ESSENTIALS OF PHILIPPINE BUSINESS LAW", "SOM", 81 ),
+(191, "MKT 104	", "MARKETING COMMUNICATIONS", "SOM", 81 )
+; 
+
+
 
 INSERT INTO professor 
-VALUES (NULL, "hi", "hii", "hello", 1);
-INSERT INTO professor 
-VALUES (NULL, "nigel", "h", "yu", 21);
-INSERT INTO professor 
-VALUES (NULL, "kristi", "d", "ingco", 31);
+VALUES (1, "Karl", "G.", "Tan", 1 ), 
+(11, "Georgina", "A.", "Ching", 1 ), 
+(21, "Julius", "B.", "Tiu", 11 ),
+(31, "Adolfo", "C.", "Chua", 21 ),
+(41, "Alfred", "D.", "Ng", 21 ),
+(51, "Allan", "E.", "Derapopa", 31 ),
+(61, "Theodoro", "X.", "Alungson", 31 ),
+(71, "Norman", "J.", "Martino", 41 ),
+(81, "Andreas", "K.", "Depulan", 41 ),
+(91, "Claudio", "L.", "de Dios", 51 ),
+(101, "Isobelo", "M.", "Sanchez", 51 ),
+(111, "Conchito", "N.", "Carmine", 61 ),
+(121, "Glen", "O.", "de los Santos", 61 ),
+(131, "Vincenz", "P.", "Boromeo", 71 ),
+(141, "Martina", "Y.", "Ninael", 71 ),
+(151, "Mariana", "Q.", "Trench", 81 ),
+(161, "Anglika", "Z.", "Grande", 81 )
+;
 
 INSERT INTO profclass 
-VALUES (1, 1); 
-INSERT INTO profclass 
-VALUES (1, 11); 
-INSERT INTO profclass 
-VALUES (11, 21); 
-INSERT INTO profclass 
-VALUES (21, 31); 
-
-INSERT INTO student 
-VALUES (1, "hi", "hello", "pass", 2017, "admin");
-INSERT INTO student 
-VALUES (2, "hi", "hello", "pass", 2015, "regular");
-
-INSERT INTO rating 
-VALUES ("LENIENCY", 5, 1, 1, 1);
-INSERT INTO rating 
-VALUES ("GRADING", 5, 1, 1, 1);
-INSERT INTO rating 
-VALUES ("STRICTNESS", 5, 1, 1, 1);
-
-INSERT INTO rating 
-VALUES ("LENIENCY", 4.2, 11, 21, 1);
-INSERT INTO rating 
-VALUES ("GRADING", 4.5, 11, 21, 1);
-INSERT INTO rating 
-VALUES ("STRICTNESS", 4.8, 11, 21, 1);
-
-INSERT INTO rating 
-VALUES ("LENIENCY", 3.2, 11, 21, 2);
-INSERT INTO rating 
-VALUES ("GRADING", 3.5, 11, 21, 2);
-INSERT INTO rating 
-VALUES ("STRICTNESS", 3.8, 11, 21, 2);
+VALUES 
+(1, 1),
+(1, 11),
+(1, 21),
+(11, 1),
+(11, 11),
+(21, 31),
+(21, 41),
+(21, 51),
+(31, 61),
+(41, 61),
+(41, 71),
+(41, 11),
+(51, 81),
+(51, 91),
+(61, 81),
+(61, 91),
+(61, 21),
+(71, 101),
+(71, 111),
+(81, 101),
+(91, 121),
+(91, 131),
+(91, 151),
+(91, 141),
+(101, 131),
+(101, 121),
+(101, 141),
+(111, 141),
+(111, 151),
+(121, 141),
+(121, 151),
+(121, 131),
+(131, 161),
+(131, 171),
+(141, 171),
+(151, 161),
+(151, 171),
+(151, 31),
+(161, 1)
+;

@@ -1,12 +1,12 @@
 <?php
 
 $tableHeadings = array(
+		"Clarity",
+		"Difficulty",
+		"Flexibility",
+		"Grading",		
         "Helpfulness",
-        "Clarity",
-        "Difficulty",
-		"Strictness",
-		"Satisfaction",
-		"Grading"
+		"Overall"
     );
 	
 ?>

@@ -58,14 +58,18 @@ require "homeTemplate.php"
 
             <div class="col-lg mx-auto order-md-3" style="margin-bottom:30px;">
                 <div class="col-md-12 border border-secondary rounded">
-                    <h2 class="text-center">Top Professors (to be implemented next sprint)</h2>
+                    <h2 class="text-center">Overall Top Rated Professors</h2>
                     <!-- <p class="text-center lead lg">Profs you may know</p> -->
                     <ul>
-                        <li>Agloro</li>
-                        <li>Agloro</li>
-                        <li>Agloro</li>
-                        <li>Agloro</li>
-                        <li>Agloro</li>
+                        <?php
+                        //get the top 5 most recently rated classes
+                        $query = "SELECT DISTINCT CONCAT(lastName, ', ', firstName, ' ', middleName) AS profName, professor.professorID, ratingValue FROM rating INNER JOIN professor ON professor.professorID = rating.professorID WHERE ratingName = 'Overall' ORDER BY ratingValue DESC LIMIT 5";
+                        $topRatedProfResult = mysqli_query($dbc, $query) or die("ERROR S");
+
+                        while($topRatedProf = mysqli_fetch_assoc($topRatedProfResult)){
+                            echo "<a href='../search/searchProfessor.php?selectedID=p{$topRatedProf['professorID']}'><li>{$topRatedProf['profName']} - {$topRatedProf['ratingValue']}</li></a>";
+                        }
+                        ?>
                     </ul>
                     <div class="text-center">
                         <img src="../assets/student.png" style="width:50%; height:50%">
