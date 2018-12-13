@@ -101,11 +101,43 @@ $departmentResult = mysqli_query($dbc, $query) or die("ERROR S");
             /*when hovering an item:*/
             background-color: #e9e9e9;
         }
+
+        .homeCon {
+            margin-top: 100px;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .homeCon {
+                margin-top: 700px;
+            }
+        }
+
+        @media only screen and (max-width: 1100px) {
+            .homeCon {
+                margin-top: 250px;
+            }
+        }
+
+        @media only screen and (max-width: 765px) {
+            .homeCon {
+                margin-top: 800px;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+                .homeCon {
+                    margin-top: 700px;
+                }
+            }
+
+
         .autocomplete-active {
             /*when navigating through the items using the arrow keys:*/
             background-color: DodgerBlue !important;
             color: #ffffff;
         }
+
+
 
     </style>
   </head>
@@ -276,7 +308,7 @@ $departmentResult = mysqli_query($dbc, $query) or die("ERROR S");
     </nav>
 
     <!-- content -->
-    <main role="main" class="container" style="margin-top: 50px;">
+    <main role="main" class="container homeCon">
 
         <div class="row">
   
@@ -375,7 +407,7 @@ $departmentResult = mysqli_query($dbc, $query) or die("ERROR S");
             </div>
           </div>
   
-          <div class="col-lg mx-auto col-md-4 order-md-2" >
+          <div class="col-lg mx-auto col-md-4 col-sm-1 order-md-2"  >
             <h2>Reviews</h2>
             <ul class="list-group" style="height: 500px; width: 520px; overflow: scroll">
                 

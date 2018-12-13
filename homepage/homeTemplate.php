@@ -26,7 +26,7 @@ if(!isset($_SESSION['login_user'])){
     <title>Search</title>
 
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet" />
+
 
     <style type="text/css">
         .autocomplete {
@@ -61,7 +61,15 @@ if(!isset($_SESSION['login_user'])){
             background-color: DodgerBlue !important;
             color: #ffffff;
         }
-		
+
+        @media only screen and (max-width: 600px) {
+            .homeContents {
+                margin-top: 750px;
+
+            }
+        }
+
+
 
     </style>
 
@@ -73,6 +81,8 @@ if(!isset($_SESSION['login_user'])){
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
     <link href="signin.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+
 
 </head>
 

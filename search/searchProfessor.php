@@ -1,6 +1,22 @@
 <?php
 require '../homepage/homeTemplate.php'
 ?>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.1.1/jq-3.3.1/dt-1.10.18/r-2.2.2/datatables.min.css"/>
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.1.1/jq-3.3.1/dt-1.10.18/r-2.2.2/datatables.min.js"></script><script type="text/javascript">
+    $(document).ready( function () {
+            //put the id of table here
+            $('#myTable').DataTable({
+                responsive:true
+            });
+        }
+    ); </script>
+
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/2.2.3/css/dataTables.responsive.css">
+
+</script>
 	  <?php
 
 //search function for professors

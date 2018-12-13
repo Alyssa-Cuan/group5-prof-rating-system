@@ -90,24 +90,24 @@ if(isset($_SESSION['registerSuccess'])){
         </div>
     </nav>
 
-    <main role="main" class="container">
+    <main role="main" class="container ">
 
         <div class="container">
 
-            <div class="row align-items-center">
+            <div class="row align-items-center" style="margin-top: 130px">
                  
-                <div class="jumbotron col-6 mx-auto col-md-6 order-md-1 bg-blue">
-                    <div class="container">
+
+                    <div class="container col-lg-6 col-md-6 mx-auto col-sm-6 order-md-1 bg-blue">
                         <div class="text-center">
                             <img src="assets/eagle.png" style="width:35%; height:35%">
-                          </div>                                    <h1 class="display-4">Welcome!</h1>
+                          </div><h1 class="display-4">Welcome!</h1>
                         <p>This is a place where you can rate your professors as well as see the ratings of other professors in ADMU</p>
                         
-                    </div>
+
 
                 </div>
 
-                <div class="col-6 mx-auto col-md-6 order-md-2">
+                <div class="mx-auto col-lg-6 col-sm- 1col-md-1 order-md-2">
 
                     <form class="form-signin border border-secondary rounded" action="" method="post" autocomplete="off">
 

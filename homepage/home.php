@@ -2,10 +2,12 @@
 require "homeTemplate.php"
 ?>
 
-<main role="main" class="container">
+<main role="main" class="container" >
     <div class="container">
-        <div class="row mt-5">
-            <div class="col-lg mx-auto order-md-1">
+        <div class="homeContents">
+        <div class="row mt-5" >
+
+            <div class="col-lg mx-auto order-md-1" style="margin-bottom:30px;">
                 <div class="col-md-12 border border-secondary rounded">
                     <h2 class="text-center">Recently Rated Professors</h2>
                     <ul>
@@ -29,7 +31,7 @@ require "homeTemplate.php"
 
             </div>
 
-            <div class="col-lg mx-auto order-md-2 ">
+            <div class="col-lg mx-auto order-md-2" style="margin-bottom:30px;">
                 <div class="col-md-12 border border-secondary rounded">
                     <h2 class="text-center">Recently Rated Classes</h2>
                     <ul>
@@ -54,9 +56,7 @@ require "homeTemplate.php"
 
             </div>
 
-            <div
-                    class="col-lg mx-auto order-md-3"
-            >
+            <div class="col-lg mx-auto order-md-3" style="margin-bottom:30px;">
                 <div class="col-md-12 border border-secondary rounded">
                     <h2 class="text-center">Top Professors (to be implemented next sprint)</h2>
                     <!-- <p class="text-center lead lg">Profs you may know</p> -->
@@ -72,6 +72,7 @@ require "homeTemplate.php"
                     </div>
                 </div>
 
+            </div>
             </div>
         </div>
     </div>
