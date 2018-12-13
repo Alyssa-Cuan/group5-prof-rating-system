@@ -69,6 +69,13 @@ if(!isset($_SESSION['login_user'])){
             }
         }
 
+        @media only screen and (max-width: 500px) {
+            .homeContents {
+                margin-top: 400px;
+
+            }
+        }
+
 
 
     </style>
