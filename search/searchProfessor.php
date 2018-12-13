@@ -47,7 +47,7 @@ function search()
 
         //print table
         //printing table headings (ordered asc)
-        echo "<div class='container'>";
+        echo "<div class='container show'>";
         echo "<table name='profData' id='professors' align='center' class='table table-striped table-bordered'> ";
         echo "<thead><tr><th>Professor Name</th><th>Course</th>";
 

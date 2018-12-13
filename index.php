@@ -63,6 +63,15 @@ if(isset($_SESSION['registerSuccess'])){
 
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet" />
+    <style type="text/css">
+        @media only screen and (max-width: 500px) {
+            .fun {
+                margin-top: 350px;
+
+            }
+        }
+
+    </style>
 
 </head>
 
@@ -94,7 +103,7 @@ if(isset($_SESSION['registerSuccess'])){
 
         <div class="container">
 
-            <div class="row align-items-center" style="margin-top: 130px">
+            <div class="row align-items-center fun">
                  
 
                     <div class="container col-lg-6 col-md-6 mx-auto col-sm-6 order-md-1 bg-blue">
