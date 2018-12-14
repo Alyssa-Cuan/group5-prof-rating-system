@@ -101,6 +101,16 @@ $departmentResult = mysqli_query($dbc, $query) or die("ERROR S");
             color: #ffffff;
         }
 
+        .homeCon {
+            margin-top: 150px;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .homeCon {
+                margin-top: 600px;
+            }
+        }
+
     </style>
   </head>
 
@@ -273,7 +283,7 @@ $departmentResult = mysqli_query($dbc, $query) or die("ERROR S");
     </nav>
 
     <!-- content -->
-    <main role="main" class="container">
+    <main role="main" class="container homeCon">
 		<?php
 require '../modules/modules.php';
 $s_dataName  = array();
@@ -369,7 +379,7 @@ if (isset($_GET['ID']) && isset($_GET['CID'])) {
       <div style="max-width: 400px">
            <?php
     for ($x = 0; $x < $arrlength; $x++) {
-        echo "<label for ='rating'>" . $tableHeadings[$x] . "</label>" . "<input class='form-control' id='myRange' type='range' name='$tableHeadings[$x]' value='1' min='1' max='5' style='width: 300px;' oninput='updateRangeInput(this)'><input type='text' value='1' style='width: 25px; text-align: center'>";
+        echo "<label for ='rating'>" . $tableHeadings[$x] . "</label>" . "<input class='form-control' id='myRange' type='range' name='$tableHeadings[$x]' value='1' min='1' max='5' style='width: 300px;' oninput='updateRangeInput(this)'><input type='text' value='1' style='width: 25px; text-align: center'><br>";
     }
 
     
